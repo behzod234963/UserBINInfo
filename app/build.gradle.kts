@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
+    alias(libs.plugins.daggerHiltApp)
 }
 
 android {
@@ -66,4 +68,39 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //    Modules
+    implementation(project(":data"))
+    implementation(project(":domain"))
+
+    //    Navigation compose
+    implementation(libs.androidx.navigation.compose)
+
+    //    Retrofit
+    implementation(libs.gsonConverter)
+    implementation(libs.retrofit2)
+
+    //    Dagger Hilt
+    implementation(libs.daggerHilt)
+    implementation(libs.daggerHilt.navigation.compose)
+    kapt(libs.daggerHiltKaptCompiler)
+
+    //    ViewModel and lifecycle dependency's
+    implementation(libs.viewModel)
+    implementation(libs.viewModelUtilities)
+    implementation(libs.liveData)
+    implementation(libs.lifecycleUtilities)
+    implementation(libs.viewModelSaveState)
+
+    //    Coroutine
+    implementation(libs.coroutine)
+
+    //    Room SQLite
+    implementation(libs.roomSQLite)
+    implementation(libs.roomWithCoroutines)
+    implementation(libs.roomPaging3)
+    kapt(libs.kaptCompiler)
+}
+kapt {
+    correctErrorTypes = true
 }

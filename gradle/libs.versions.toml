@@ -7,7 +7,18 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.12.01"
+appcompat = "1.7.0"
+material = "1.12.0"
+
+retrofit = "2.11.0"
+daggerHilt = "2.52"
+daggerHiltNavigationCompose = "1.2.0"
+lifecycle = "2.8.7"
+coroutine = "1.9.0"
+room = "2.6.1"
+navigationCompose = "2.8.5"
+datastoreCoreAndroid = "1.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +35,44 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Retrofit 2
+retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+gsonConverter = { group = "com.squareup.retrofit2" , name = "converter-gson", version.ref = "retrofit" }
+
+# Dagger Hilt
+daggerHilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
+daggerHiltKaptCompiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerHilt" }
+daggerHilt-navigation-compose = { group = "androidx.hilt" ,name  = "hilt-navigation-compose" , version.ref = "daggerHiltNavigationCompose"}
+
+# ViewModel utilities
+viewModel = { group = "androidx.lifecycle" , name = "lifecycle-viewmodel-ktx" , version.ref = "lifecycle" }
+viewModelUtilities = { group = "androidx.lifecycle" , name = "lifecycle-viewmodel-compose" , version.ref = "lifecycle" }
+liveData = { group = "androidx.lifecycle" , name = "lifecycle-livedata-ktx" , version.ref = "lifecycle" }
+lifecycleUtilities = { group = "androidx.lifecycle" , name = "lifecycle-runtime-compose" , version.ref = "lifecycle" }
+viewModelSaveState = { group = "androidx.lifecycle" , name = "lifecycle-viewmodel-savedstate" , version.ref = "lifecycle" }
+
+# Coroutine
+coroutine = { group = "org.jetbrains.kotlinx" , name = "kotlinx-coroutines-android" , version.ref = "coroutine" }
+
+# Room SQLite
+roomSQLite = { group = "androidx.room" , name = "room-runtime" , version.ref = "room" }
+roomWithCoroutines = { group = "androidx.room" , name = "room-ktx" , version.ref = "room" }
+roomPaging3 = { group = "androidx.room" , name = "room-paging" , version.ref = "room" }
+kaptCompiler = { group = "androidx.room" , name = "room-compiler" , version.ref = "room" }
+
+# Navigation compose
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+
+# DataStore
+androidx-dataStore = { group = "androidx.datastore" , name  = "datastore-preferences" , version.ref = "datastoreCoreAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
+daggerHiltProject = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+daggerHiltApp = { id = "com.google.dagger.hilt.android" , version.ref = "daggerHilt" }

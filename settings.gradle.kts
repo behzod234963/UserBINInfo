@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "UserBINInfo"
 include(":app")
- 
+include(":data")
+include(":domain")
