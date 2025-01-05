@@ -73,8 +73,8 @@ fun SearchInfoScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 30.dp, end = 10.dp, start = 10.dp)
             .background(if (isSystemInDarkTheme()) Color.Black else Color.White)
+            .padding(top = 30.dp, end = 10.dp, start = 10.dp)
     ) {
         Row(
             modifier = Modifier
