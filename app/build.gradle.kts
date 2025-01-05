@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.mr.anonym.userbininfo"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.mr.anonym.userbininfo"
@@ -100,6 +100,14 @@ dependencies {
     implementation(libs.roomWithCoroutines)
     implementation(libs.roomPaging3)
     kapt(libs.kaptCompiler)
+
+    //    LiveData extensions
+    implementation(libs.liveDataExtensions)
+
+    //    OkHttp
+    implementation(libs.okHttp)
+    implementation(platform(libs.okHttpBom))
+    implementation(libs.okHttpLoggingInterceptor)
 }
 kapt {
     correctErrorTypes = true

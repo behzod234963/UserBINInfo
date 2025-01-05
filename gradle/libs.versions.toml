@@ -19,6 +19,8 @@ coroutine = "1.9.0"
 room = "2.6.1"
 navigationCompose = "2.8.5"
 datastoreCoreAndroid = "1.1.1"
+liveData = "1.7.6"
+okHttp = "4.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -66,8 +68,16 @@ kaptCompiler = { group = "androidx.room" , name = "room-compiler" , version.ref 
 # Navigation compose
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
+# LiveData extensions
+liveDataExtensions = { group = "androidx.compose.runtime" , name = "runtime-livedata" , version.ref = "liveData" }
+
 # DataStore
 androidx-dataStore = { group = "androidx.datastore" , name  = "datastore-preferences" , version.ref = "datastoreCoreAndroid" }
+
+# OkHttp logging interceptor
+okHttp = { group = "com.squareup.okhttp3" , name = "okhttp" , version.ref = "okHttp"}
+okHttpBom = { group = "com.squareup.okhttp3" , name = "okhttp-bom" , version.ref = "okHttp"}
+okHttpLoggingInterceptor = { group = "com.squareup.okhttp3" , name = "logging-interceptor" , version.ref = "okHttp"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
